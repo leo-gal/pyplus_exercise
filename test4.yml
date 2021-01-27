@@ -1,0 +1,15 @@
+---
+- some_string
+- "some string that has multiple words"
+- null
+# Booleans
+- True
+- False
+- true
+- false
+- on
+- off
+- yes
+- no
+# Strings
+- 'yes'
