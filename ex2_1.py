@@ -4,7 +4,7 @@ from netmiko import ConnectHandler
 from getpass import getpass
 
 device1 = {
-        "host": "cisco3.lasthop.io",
+        "host": "cisco4.lasthop.io",
         "username": "pyclass",
         "password": getpass(),
         "device_type": "cisco_ios"

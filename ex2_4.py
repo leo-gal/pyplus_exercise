@@ -14,9 +14,9 @@ device1 = {
 }
 
 cfg = [
-    "no ip name-server 1.1.1.1",
+    "ip name-server 1.1.1.1",
     "no ip name-server 1.0.0.1",
-    "no ip domain-lookup",
+    "ip domain-lookup",
 ]
 
 start_time = datetime.now()

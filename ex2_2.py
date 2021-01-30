@@ -10,26 +10,27 @@ device1 = {
         "password": getpass(),
         "device_type": "cisco_nxos",
         "session_log": "session_log.txt",
-        
+        "global_delay_factor": 2,
 }
 
 net_connect = ConnectHandler(**device1)
 print(net_connect.find_prompt())
 
 command = 'show lldp neighbors detail'
-print(datetime.now())
-output = net_connect.send_command(command, delay_factor=2)              
+start_time = datetime.now()
+output = net_connect.send_command(command)              
 print()
 print(output)
 print()
-print(datetime.now())
+end_time = datetime.now()
+print(end_time - start_time)
 
-
-print(datetime.now())
-output = net_connect.send_command(command, delay_factor=8)              
+start_time = datetime.now()
+output = net_connect.send_command(command, delay_factor=16)              
 print()
 print(output)
 print()
-print(datetime.now())
+end_time = datetime.now()
+print(end_time - start_time)
 
 
