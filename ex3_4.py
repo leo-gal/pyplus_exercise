@@ -17,7 +17,7 @@ for  arp_entry in json_data["ipV4Neighbors"]:
    macaddr = arp_entry['hwAddress']
    arp_dict[ipaddr] = macaddr
 
-print(arp_dict)
+pprint(arp_dict)
 
 
 #   for ipv4_or_ipv6,addr_info in ipaddr_dict.items():  
@@ -28,8 +28,8 @@ print(arp_dict)
 #         if ipv4_or_ipv6 == 'ipv6':
 #            ipv6_list.append(f"{addr}/{pfxl}")
 #
-#print(ipv4_list)
-#print(ipv6_list)
+#pprint(ipv4_list)
+#pprint(ipv6_list)
 
 
 """

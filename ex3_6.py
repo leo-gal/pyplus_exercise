@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
 
     home_dir = path.expanduser("~")
-    filename = path.join(home_dir, "leo_work/.netmiko.yml")
+    filename = path.join(home_dir, ".netmiko.yml")
     print(filename) 
 
 
@@ -27,9 +27,8 @@ if __name__ == "__main__":
 
     cisco_cfg = CiscoConfParse(show_run.splitlines())
     #interfaces = cisco_cfg.find_objects(r"^interface")
-    interfaces = cisco_cfg.find_objects_w_child(
-    parentspec=r"^interface", childspec=r"^\s+ip address")
-   
+    interfaces = cisco_cfg.find_objects_w_child( parentspec=r"^interface", childspec=r"^\s+ip address" )
+    print(interfaces)
 
     for intf in interfaces:
         print("Interface Line: {}".format(intf.text))
